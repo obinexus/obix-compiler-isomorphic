@@ -1,0 +1,115 @@
+{
+  "package": "obix-compiler-isomorphic",
+  "dir": "compiler/obix-compiler-isomorphic",
+  "importedBy": "scripts/recovery/import-local-candidates.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-6 local-recovered candidate (adopted after build + behaviour checks)",
+  "sources": [
+    {
+      "label": "local-recovered:snap-20260924T142414Z:<local workspace>/obix-compiler-isomorphic",
+      "kind": "local-recovered",
+      "originalPath": "<local workspace>/obix-compiler-isomorphic",
+      "snapshotCopy": "local-snapshot/unversioned/Obix__packages__obix-compiler-isomorphic",
+      "hasGit": false,
+      "remote": null,
+      "license": "MIT",
+      "licenseFileInSource": true,
+      "filesImported": 9,
+      "files": [
+        {
+          "rel": "LICENSE",
+          "sha256": "c70670b4999f290b16deaacd52bdc2da0526358bc2513ca2e66e57bdd7cbd491",
+          "size": 1075
+        },
+        {
+          "rel": "README.md",
+          "sha256": "f9c827f7ea7aee7adf04c25b0312d025afc6a9464ce3af70cb2004d92bf835cd",
+          "size": 1939
+        },
+        {
+          "rel": "tsconfig.json",
+          "sha256": "9222ec437c1c4b8378784ebceca444214102b64598ff2d611cb4f362d576990d",
+          "size": 137
+        },
+        {
+          "rel": "tsconfig.test.json",
+          "sha256": "b4e8b5e0c77e5a3c41eb678c6a141d438057012ffd194ad4a51f564ca0da077a",
+          "size": 183
+        },
+        {
+          "rel": "test/ssr.test.ts",
+          "sha256": "49e36194568a9ceab9fd0de873a930db687441050aa3d29fd26f94230ea9f008",
+          "size": 7799
+        },
+        {
+          "rel": "src/env.ts",
+          "sha256": "fcc30234b4df5c071d191a7d9a333860fc085b75e503186ec67ea490c608007b",
+          "size": 536
+        },
+        {
+          "rel": "src/hydrate.ts",
+          "sha256": "ec13b243710ed4c64b1ca6d75454cca0398e4f8e7fcb31f71c5d1e7e6a54de96",
+          "size": 1345
+        },
+        {
+          "rel": "src/index.ts",
+          "sha256": "d5c1aa3fb50c0a53ba9974eb60512da0745317589ed111908390d6455999c017",
+          "size": 372
+        },
+        {
+          "rel": "src/render.ts",
+          "sha256": "89323734b3de71ecced5b7f32bda88079dad53c3f4b66e0226aa0affa15ee69e",
+          "size": 661
+        }
+      ]
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-compiler-isomorphic",
+    "version": "0.1.0",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc -p tsconfig.json",
+      "typecheck": "tsc -p tsconfig.json --noEmit",
+      "test": "tsc -p tsconfig.json && tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\""
+    },
+    "dependencies": {
+      "@obinexusltd/obix-compiler-fudguard": "0.1.0"
+    },
+    "devDependencies": {
+      "@types/node": "22.20.3",
+      "typescript": "5.4.5"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (version 0.5.0, exact internal pins, workspace conventions; the candidate's devDependencies typescript@5.4.5 and @types/node are provided by the workspace root)",
+    "README.md: recovery note prepended; the rest is the candidate's text",
+    "src/, test/, tsconfig.json, tsconfig.test.json, LICENSE copied byte for byte after a SHA-256 check against the snapshot manifest"
+  ],
+  "localFixes": [
+    {
+      "stage": "stage-7",
+      "files": [
+        "README.md"
+      ],
+      "why": "Stage 7 (tarball inspection): the recovered-package banner named an absolute path of the build machine; a published README must not (the path stays in PROVENANCE.json)"
+    }
+  ],
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-compiler-isomorphic",
+      "dir": "compiler/obix-compiler-isomorphic",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-compiler-isomorphic, current name obix-compiler-isomorphic (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "compiler/obix-compiler-isomorphic",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}

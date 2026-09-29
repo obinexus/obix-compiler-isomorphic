@@ -1,0 +1,62 @@
+{
+  "name": "obix-compiler-isomorphic",
+  "version": "0.5.0",
+  "description": "Server-side rendering for OBIX: state -> render -> fudguard -> HTML string, with no DOM anywhere in the path, and a markup-equality handoff check.",
+  "license": "MIT",
+  "author": "OBINexus Computing — Nnamdi Michael Okpala <okpalan@protonmail.com>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./hydrate": {
+      "types": "./dist/hydrate.d.ts",
+      "import": "./dist/hydrate.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE",
+    "test",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "tsc -p tsconfig.json && tsc -p tsconfig.test.json && node --test \"dist-test/test/*.test.js\""
+  },
+  "dependencies": {
+    "obix-compiler-fudguard": "0.5.0"
+  },
+  "keywords": [
+    "obix"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obinexus/obix-compiler-isomorphic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obinexus/obix-compiler-isomorphic/issues"
+  },
+  "homepage": "https://github.com/obinexus/obix-compiler-isomorphic#readme",
+  "obix": {
+    "runtime": "universal",
+    "roles": [
+      "ssr",
+      "compiler"
+    ]
+  }
+}
